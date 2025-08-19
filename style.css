@@ -37,6 +37,26 @@ header.sticky {
     background-color: #3a6cf4;
     padding: 10px 200px;
 }
+@media (max-width:900px){
+  header .navigation { width: 60%; right: -100%; }
+  header .navigation.active { right: 0; }
+  .menu-btn { display: block; }
+  .main .content,
+  .about .content,
+  .skills .content,
+  .services .content,
+  .work .content,
+  .projects .content,
+  .contact .row { flex-direction: column; align-items: stretch; }
+  .card, .column { width: 100%; margin-bottom: 20px; }
+  img { max-width: 100%; height: auto; }
+}
+@media (max-width:600px){
+  html { font-size: 14px; }
+  .section-title, .content-title { font-size: 1.2rem; }
+  .btn { font-size: 1em; padding: 8px 16px; }
+}
+
 
 header .brand {
     color: white;
@@ -833,4 +853,5 @@ section {
         width: 100%;
     }
 }
+
 
