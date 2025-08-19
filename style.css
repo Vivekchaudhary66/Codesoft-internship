@@ -140,56 +140,7 @@ section{
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 120px; /* apne navbar ki height ke hisaab se */
-}
-/* Main section background */
-.main {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    background-image: url('bg.jpg');
-    background-size: cover;        /* cover ensures full screen */
-    background-position: center;   /* center the image */
-    background-repeat: no-repeat;
-    background-attachment: fixed;  /* remove if mobile scroll issue */
-}
 
-/* Make background scrollable on mobile (fix for iOS/Android) */
-@media (max-width: 768px) {
-    .main {
-        height: auto;              /* allow content height */
-        min-height: 100vh;
-        background-attachment: scroll; /* fixed background breaks on mobile */
-    }
-
-    .main .content h2 {
-        font-size: 1.5em;          /* smaller text for mobile */
-    }
-
-    .animated-text h3 {
-        font-size: 1.8em;          /* smaller animated text */
-    }
-
-    section {
-        padding: 60px 20px;        /* compact padding for all sections */
-    }
-
-    .about .content {
-        flex-direction: column;    /* stack columns on mobile */
-        gap: 20px;
-    }
-
-    .about .content .col-left,
-    .about .content .col-right {
-        width: 100%;               /* full width for mobile */
-    }
-
-    .projects .content {
-        gap: 20px;                 /* reduce gap for small screens */
-        justify-content: center;
-    }
-}
 
 .main{
     position: relative;
@@ -883,6 +834,7 @@ html {
     opacity: 0;
     transition: all 0.3s ease;
   }
+
 
 
 
