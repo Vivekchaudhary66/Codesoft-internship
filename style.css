@@ -18,6 +18,7 @@ html {
     scroll-padding-top: 120px;
 }
 
+/* Header, Navbar, & Main Section */
 header {
     z-index: 889;
     position: fixed;
@@ -63,10 +64,6 @@ header .navigation a:hover {
 
 header.sticky .navigation a:hover {
     color: black;
-}
-
-section {
-    padding: 100px 200px;
 }
 
 .main {
@@ -116,21 +113,11 @@ section {
 }
 
 @keyframes text-move {
-    0%, 15% {
-        margin-top: 0px;
-    }
-    25%, 40% {
-        margin-top: -70px;
-    }
-    50%, 65% {
-        margin-top: -140px;
-    }
-    75%, 90% {
-        margin-top: -70px;
-    }
-    100% {
-        margin-top: 0px;
-    }
+    0%, 15% { margin-top: 0px; }
+    25%, 40% { margin-top: -70px; }
+    50%, 65% { margin-top: -140px; }
+    75%, 90% { margin-top: -70px; }
+    100% { margin-top: 0px; }
 }
 
 .btn {
@@ -162,7 +149,10 @@ section {
     margin-right: 30px;
 }
 
-/* About */
+/* Common Section Styles */
+section {
+    padding: 100px 200px;
+}
 
 .title {
     width: 100%;
@@ -203,6 +193,7 @@ section {
     transform: translateX(-50%);
 }
 
+/* About Section */
 .about .content {
     position: relative;
     width: 100%;
@@ -249,7 +240,6 @@ section {
 }
 
 /* Skills Section */
-
 .skills {
     background-color: black;
 }
@@ -312,33 +302,13 @@ section {
     border-radius: 3px;
 }
 
-.skills .content .col-right .bar .html::before {
-    width: 95%;
-    background-color: #e45126;
-}
+.skills .content .col-right .bar .html::before { width: 95%; background-color: #e45126; }
+.skills .content .col-right .bar .css::before { width: 90%; background-color: #0c73b8; }
+.skills .content .col-right .bar .javascript::before { width: 80%; background-color: #e3a324; }
+.skills .content .col-right .bar .python::before { width: 85%; background-color: blue; }
+.skills .content .col-right .bar .php::before { width: 65%; background-color: #6d7eb8; }
 
-.skills .content .col-right .bar .css::before {
-    width: 90%;
-    background-color: #0c73b8;
-}
-
-.skills .content .col-right .bar .javascript::before {
-    width: 80%;
-    background-color: #e3a324;
-}
-
-.skills .content .col-right .bar .python::before {
-    width: 85%;
-    background-color: blue;
-}
-
-.skills .content .col-right .bar .php::before {
-    width: 65%;
-    background-color: #6d7eb8;
-}
-
-/* Services */
-
+/* Services Section */
 .services .content {
     display: flex;
     justify-content: center;
@@ -397,8 +367,7 @@ section {
     color: white;
 }
 
-/* Projects */
-
+/* Projects Section */
 .projects .content {
     display: flex;
     flex-wrap: wrap;
@@ -462,8 +431,7 @@ section {
     gap: 30px;
 }
 
-/* Work */
-
+/* Work Section */
 .work {
     background-color: #000016;
 }
@@ -504,8 +472,7 @@ section {
     transform: scale(1.2);
 }
 
-/* Contact */
-
+/* Contact Section */
 .contact {
     padding-top: 10px;
 }
@@ -619,7 +586,7 @@ section {
     background: #235bf6;
 }
 
-/* Contact Form Container */
+/* Contact Form Specific Styling */
 .contact-form {
     width: 80%;
     max-width: 600px;
@@ -630,7 +597,6 @@ section {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Input aur Textarea */
 .contact-form input,
 .contact-form textarea {
     width: 100%;
@@ -642,7 +608,6 @@ section {
     outline: none;
 }
 
-/* Button */
 .contact-form button {
     width: 100%;
     padding: 12px;
@@ -659,8 +624,7 @@ section {
     background: linear-gradient(90deg, #1cc88a, #4e73df);
 }
 
-/* Footer */
-
+/* Footer Section */
 .footer {
     background: #000016;
     color: #fff;
@@ -684,8 +648,27 @@ section {
     text-decoration: none;
 }
 
-/* Media Queries for Responsiveness */
+/* Scroll to Top Button */
+.scrollToTop-btn {
+    z-index: 999;
+    position: fixed;
+    background: #3a6cf4;
+    color: #fff;
+    width: 45px;
+    height: 45px;
+    right: 0;
+    bottom: 10px;
+    font-size: 22px;
+    text-align: center;
+    line-height: 45px;
+    border-radius: 3px;
+    cursor: pointer;
+    pointer-events: none;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
 
+/* Media Queries for Responsive Design */
 @media (max-width: 1040px) {
     header {
         padding: 12px 20px;
@@ -700,6 +683,7 @@ section {
     }
 
     .navigation.active {
+        display: flex;
         z-index: 889;
         position: fixed;
         background-color: white;
@@ -707,7 +691,6 @@ section {
         right: 0;
         width: 380px;
         height: 100%;
-        display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
@@ -730,6 +713,7 @@ section {
     }
 
     .menu-btn {
+        display: block; /* Hamburger icon show karega */
         position: absolute;
         background-image: url(Image/menu.png);
         background-position: center;
@@ -758,11 +742,11 @@ section {
     }
 
     .main .content h2 {
-        font-size: 1em;
+        font-size: 1.5em; /* Font size thoda badha diya */
     }
 
     .animated-text h3 {
-        font-size: 2.2em;
+        font-size: 2em;
     }
 
     .section-title {
@@ -773,17 +757,19 @@ section {
         flex-direction: column;
     }
 
-    .about .content .col-left {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
+    .about .content .col-left,
     .about .content .col-right {
         width: 100%;
-        margin-top: 40px;
     }
 
-    /* Skills */
+    .about .content .col-left {
+        margin-bottom: 20px;
+    }
+    
+    .about .content .col-right {
+        margin-top: 20px;
+    }
+
     .skills .content {
         flex-direction: column;
     }
@@ -794,17 +780,22 @@ section {
     }
 
     .skills .content .col-right {
-        margin-top: 40px;
+        margin-top: 20px;
     }
 
-    .contact-form {
-        padding: 35px 40px;
+    .contact .content .row .card {
+        width: 100%;
+        margin: 10px 0;
     }
 }
 
 @media (max-width: 768px) {
     section {
         padding: 60px 15px;
+    }
+
+    .main {
+        background-attachment: scroll; /* Mobile par fixed background hata diya */
     }
 
     .main .content {
@@ -821,44 +812,25 @@ section {
     }
 
     .animated-text {
-        height: 60px;
+        height: 50px; /* height kam kiya */
     }
 
     .animated-text h3 {
-        font-size: 2em;
-        line-height: 60px;
+        font-size: 1.5em; /* font size kam kiya */
+        line-height: 50px;
     }
 
     .title p {
         width: 95%;
-    }
-
-    .contact .content .row .card {
-        width: 100%;
-        margin: 10px 0;
     }
     
     .contact-form {
         width: 100%;
         padding: 20px;
     }
+
+    .projects .card {
+        width: 100%;
+    }
 }
 
-.scrollToTop-btn {
-    z-index: 999;
-    position: fixed;
-    background: #3a6cf4;
-    color: #fff;
-    width: 45px;
-    height: 45px;
-    right: 0;
-    bottom: 10px;
-    font-size: 22px;
-    text-align: center;
-    line-height: 45px;
-    border-radius: 3px;
-    cursor: pointer;
-    pointer-events: none;
-    opacity: 0;
-    transition: all 0.3s ease;
-}
